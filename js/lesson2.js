@@ -145,7 +145,26 @@
 // for (const friend of friends) {
 //     String += friend + ',';
 
-    
 // }
 // string = String.slice(0, String.length - 1);
 // console.log(string);
+
+
+
+
+
+// Задача 6. Напиши скрипт который заменяет регистр каждого символа в строке на противоположный
+// Например если строка "JavaScript", то на выходе должна быть строка "jAVAsCRIPT"
+
+// const string = 'JavaScript';
+// const letters = string.split('');
+// let invertedString = '';
+
+// console.log(letters);
+
+// for (const letter of letters) {
+//     // console.log(letter);
+
+//     invertedString = letter === letter.toLowerCase() ? invertedString += letter.toUpperCase() : invertedString += letter.toLowerCase();
+// }
+// console.log(invertedString);
