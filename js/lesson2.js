@@ -103,8 +103,30 @@
 // Задача 4. Напиши скрипт поиска самого маленького числа в массиве
 // при условии что числа уникальные (не повторяются)
 
-const numbers = [51, 18, 13, 24, 7, 85, 19];
-for (let i = 0; i < numbers.length; i += 1) {
-    const number = numbers[i];
-    
-}
+// const numbers = [51, 18, 13, 24, 7, 85, 19];
+// let smallesNumber = numbers[0];
+
+// for (const number of numbers) {
+//     // console.log(number);
+//     if (number < smallesNumber) {
+//         smallesNumber = number;
+
+//     }
+
+// }
+// console.log(smallesNumber);
+// let biggestNumber = numbers[0];
+// for (const number of numbers) {
+//     console.log(number);
+//     if (number > biggestNumber) {
+//         biggestNumber = number;
+
+//     }
+// }
+// console.log('BiggestNumber =', biggestNumber);
+
+
+
+
+
+// Задача 5. Напиши скрипт 
