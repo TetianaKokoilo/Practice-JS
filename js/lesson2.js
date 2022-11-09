@@ -129,4 +129,23 @@
 
 
 
-// Задача 5. Напиши скрипт 
+// Задача 5. Напиши скрипт , который объединяет все элементы массива в одно строковое значение.
+// Элементов может быть произвольное колличество
+// Пусть элементы массива в строке будут разделены запятой.
+// Сначала через for
+// Потом через join
+
+// const friends = ['Mango', 'Poly', 'Kiwi', 'Ajax'];
+
+// console.log(friends.join(","));
+
+// или
+
+// let String = '';
+// for (const friend of friends) {
+//     String += friend + ',';
+
+    
+// }
+// string = String.slice(0, String.length - 1);
+// console.log(string);
