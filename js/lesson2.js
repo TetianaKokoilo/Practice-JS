@@ -168,3 +168,28 @@
 //     invertedString = letter === letter.toLowerCase() ? invertedString += letter.toUpperCase() : invertedString += letter.toLowerCase();
 // }
 // console.log(invertedString);
+
+
+
+
+
+// Задача 7. Делаем slug в URL из названия статьи (например на dev. to)
+// Заголовок статьи состоит из букв и пробелов
+//
+//  - Нормальзируем строку
+//  - Разбиваем по словам
+//  - Сшиваем в строку с разделителями
+
+// const title = 'Top 10 benefits of React framework';
+// // const normalizedToLowerCaseInput = title.toLowerCase();
+
+// // const newTitle = normalizedToLowerCaseInput.split(' ');
+
+// // const slug = newTitle.join('-');
+
+
+// // console.log(slug);
+
+// // 2 вариант
+
+// console.log(title.toLowerCase().split(' ').join('-'));
