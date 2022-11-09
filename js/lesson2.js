@@ -253,3 +253,8 @@
 
 // cards.splice(index, 1, cardToUpdate);
 // console.table(cards);
+
+
+
+
+
