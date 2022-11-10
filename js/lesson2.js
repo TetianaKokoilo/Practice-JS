@@ -258,3 +258,111 @@
 
 
 
+
+// ФУНКЦИИ
+
+
+
+
+
+// 1 вариант вызова функции
+
+// const add = function () {
+//     console.log('function add');
+// }
+// add();
+
+// 2 вариант вызова функцци
+// function add() {
+//     console.log('function add');
+// }
+// add();
+// add();
+
+
+
+
+
+
+// Задача 1. Напиши функцию calculateTotalPrice(items)
+// которая принимает масив цен (чисел) и возвращает их сумму
+
+// const cart = [54, 28, 105, 70, 92, 17, 120, 12, 25, 90];
+// let total = 0;
+
+// for (const value of cart) {
+//     total += value;
+    
+// }
+// console.log('Total =', total);
+
+// const calculateTotalPrice = function (items) {
+//     console.log('items внутри функции', items);
+
+//     let total = 0;
+
+//     for (const item of items) {
+//         total += item;
+//     }
+    
+//     return total;
+// }
+
+// console.log(calculateTotalPrice([1, 2, 3]));
+// console.log(calculateTotalPrice([5, 10, 15, 20]));
+// console.log(calculateTotalPrice([100, 200, 300]));
+
+
+
+
+
+
+
+// Задача 2. Напиши функцию logItems (items) для перебора и логирования массива
+
+// const logItems = function (items) {
+//     for (const item of items) {
+//         console.log(item);
+        
+//     }
+// }
+
+// logItems(['Mango', 'Poly', 'Kiwi', 'Ajax']);
+// logItems([1, 2, 3, 4, 5]);
+// logItems(['клавиатура', 'наушники', 'часы']);
+
+
+
+
+
+
+
+// Задача 3. Напиши функцию findLogin(allLogins, login) для поиска логина
+//  - если логина нет, вывести сообщение 'Пользователь [логин] не найден'
+//  - если нашли логин, вывести сообщение 'Пользователь [логин] найден'
+//
+
+const logins = ['logoA', 'logoB', 'logoC', 'logoD'];
+
+const findLogin = function (allLogins, loginToFind) {
+    let message = `Пользователь ${loginToFind} не найден`;
+
+    for (const login of allLogins) {
+        if (login === loginToFind) {
+            message = `Пользователь ${loginToFind} найден`;
+
+            return message;
+        
+    
+
+        }
+
+    }
+        
+    
+}
+
+console.log(findLogin(logins, 'logoAF'));
+console.log(findLogin(logins, 'logoB'));
+console.log(findLogin(logins, 'logoC'));
+console.log(findLogin(logins, 'logoD'));
