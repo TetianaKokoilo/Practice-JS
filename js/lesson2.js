@@ -420,3 +420,31 @@
 // console.log(changeCase('fkRTn'));
 // console.log(changeCase('KfPOIgdQk'));
 // console.log(changeCase('LovNMrTcd'));
+
+
+
+
+
+
+
+// Задача 7. Напиши функцию  slugify(string) которая получает и возвращает URL-slug
+// Строка статьи состоит из букв и пробелов
+
+
+// const slugify = function (string) {
+//     const normalizedToLowerCaseInput = string.toLowerCase();
+//     const newTitle = normalizedToLowerCaseInput.split(' ');
+//     const slug = newTitle.join('-');
+
+//     return slug;
+// }
+
+// console.log(slugify('Top 10 benefits of React framework'));
+
+
+// 2 вариант
+// const slugify = function (string) {
+//     return string.toLowerCase().split(' ').join('-');
+// }
+
+// console.log(slugify('Top 10 benefits of React framework'));
