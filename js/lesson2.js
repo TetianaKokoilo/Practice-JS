@@ -397,3 +397,26 @@
 // console.log(findSmallesNumber([3, 8, 12, -2, 15]));
 // console.log(findSmallesNumber([100, 54, 8, 12, 47]));
 // console.log(findSmallesNumber([7, 21, 84, 15, 4]));
+
+
+
+
+
+
+// Задача 6. Напиши функцию changeCase(string) которая заменяет регистр каждого символа в строке на противоположный
+// Например если строка "JavaScript", то на выходе должна быть строка "jAVAsCRIPT"
+
+// const changeCase = function (string) {
+//     const letters = string.split('');
+//     let invertedString = '';
+
+//     for (const letter of letters) {
+//         invertedString = letter === letter.toLowerCase() ? invertedString += letter.toUpperCase() : invertedString += letter.toLowerCase();
+//     }
+
+//     return invertedString;
+// }
+
+// console.log(changeCase('fkRTn'));
+// console.log(changeCase('KfPOIgdQk'));
+// console.log(changeCase('LovNMrTcd'));
