@@ -448,3 +448,36 @@
 // }
 
 // console.log(slugify('Top 10 benefits of React framework'));
+
+
+
+
+
+
+
+// Задача 8. Псевдомассив arguments и Array.from и ...
+
+// const fn = function () {
+//     console.log(arguments);
+
+//     const args = Array.from(arguments);
+//     console.log(args);
+// }
+
+// fn(1, 2, 3, 4, 5, 6, 7);
+
+// ИЛИ совремпнный вариант ... rest
+
+// const fn = function (...args) {
+//     console.log(args);
+// }
+
+// fn(1, 2, 3, 4, 5, 6, 7);
+
+// Напиши функцию add для сложения произвольного количемтва аргументов (чисел)
+//  - Array.from()
+//  - операция ... rest
+
+const add = function () {
+    
+}
