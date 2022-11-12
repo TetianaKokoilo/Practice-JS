@@ -458,7 +458,7 @@
 // console.log(login);
 
 // if (login === 'Адмін') {
-  
+
 //   password = prompt('введіть пароль');
 //   console.log(password, typeof password);
 
