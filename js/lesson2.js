@@ -344,25 +344,36 @@
 
 const logins = ['logoA', 'logoB', 'logoC', 'logoD'];
 
+// const findLogin = function (allLogins, loginToFind) {
+
+//     for (const login of allLogins) {
+//         if (login === loginToFind) {
+//            return `Пользователь ${loginToFind} найден`;
+//         }
+
+//     }
+        
+//     return `Пользователь ${loginToFind} не найден`;
+// }
+
+
+// ИЛИ
+
 const findLogin = function (allLogins, loginToFind) {
-    let message = `Пользователь ${loginToFind} не найден`;
+    return allLogins.includes(loginToFind) ? `Пользователь ${loginToFind} найден` : `Пользователь ${loginToFind} не найден`;
 
-    for (const login of allLogins) {
-        if (login === loginToFind) {
-            message = `Пользователь ${loginToFind} найден`;
-
-            return message;
-        
-    
-
-        }
-
-    }
-        
-    
 }
 
 console.log(findLogin(logins, 'logoAF'));
-console.log(findLogin(logins, 'logoB'));
+console.log(findLogin(logins, 'logoEB'));
 console.log(findLogin(logins, 'logoC'));
 console.log(findLogin(logins, 'logoD'));
+
+
+
+
+
+
+
+
+
