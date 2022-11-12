@@ -342,7 +342,7 @@
 //  - если нашли логин, вывести сообщение 'Пользователь [логин] найден'
 //
 
-const logins = ['logoA', 'logoB', 'logoC', 'logoD'];
+// const logins = ['logoA', 'logoB', 'logoC', 'logoD'];
 
 // const findLogin = function (allLogins, loginToFind) {
 
@@ -359,17 +359,15 @@ const logins = ['logoA', 'logoB', 'logoC', 'logoD'];
 
 // ИЛИ
 
-const findLogin = function (allLogins, loginToFind) {
-    return allLogins.includes(loginToFind) ? `Пользователь ${loginToFind} найден` : `Пользователь ${loginToFind} не найден`;
+// const findLogin = function (allLogins, loginToFind) {
+//     return allLogins.includes(loginToFind) ? `Пользователь ${loginToFind} найден` : `Пользователь ${loginToFind} не найден`;
 
-}
+// }
 
-console.log(findLogin(logins, 'logoAF'));
-console.log(findLogin(logins, 'logoEB'));
-console.log(findLogin(logins, 'logoC'));
-console.log(findLogin(logins, 'logoD'));
-
-
+// console.log(findLogin(logins, 'logoAF'));
+// console.log(findLogin(logins, 'logoEB'));
+// console.log(findLogin(logins, 'logoC'));
+// console.log(findLogin(logins, 'logoD'));
 
 
 
@@ -377,3 +375,25 @@ console.log(findLogin(logins, 'logoD'));
 
 
 
+
+
+// Задача 4. Напиши функцию findSmallesNumber(numbers) для поиска самого маленького числа в массиве
+// при условии что числа уникальные (не повторяются)
+
+// const numbers = [51, 18, 13, 24, 7, 85, 19];
+
+// const findSmallesNumber = function (allNumbers) {
+//     let findSmallesNumber = allNumbers[0];
+//     for (const number of allNumbers) {
+//     // console.log(number);
+//         if (number < findSmallesNumber) {
+//             findSmallesNumber = number;
+
+//         }
+//     }
+//     return findSmallesNumber;
+// }
+
+// console.log(findSmallesNumber([3, 8, 12, -2, 15]));
+// console.log(findSmallesNumber([100, 54, 8, 12, 47]));
+// console.log(findSmallesNumber([7, 21, 84, 15, 4]));
