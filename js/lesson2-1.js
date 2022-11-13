@@ -6,7 +6,6 @@
 // Видаліть перший елемент та виведіть його в консоль.
 // Вставте «Country» та «Reggae» на початок масиву.
 
-
 //   /** Cтворюємо масив */
 //   let genres = ['Jazz', 'Blues'];
 
@@ -33,11 +32,6 @@
 //   genres.unshift('Country','Reggae');
 //   console.log(genres);
 
-
-
-
-
-
 // Example 2 - Масиви та рядки
 // Напиши скрипт для обчислення площі прямокутника зі сторонами,
 // значення яких зберігаються у змінній values у вигляді рядка.
@@ -47,15 +41,12 @@
 
 // /** розділяємо рядок по пробілу. Створюється массив з елементами ['8','11']  */
 //  const sides = values.split(' ');
+
 //  console.log(sides);
 
 // /** Перемножаємо значення масива по індексу */
 //  const square = sides[0] * sides[1];
 //  console.log(square)
-
-
-
-
 
 //  * Task 3
 //   * Для кожного елемента масиву виведи в консоль рядок у форматі
@@ -69,13 +60,8 @@
 // const fruits = ['🍎', '🍇', '🍑', '🍌', '🍋'];
 
 // for (let i = 0; i < fruits.length; i += 1) {
-//   console.log(`${i + 1}: ${fruits[i]}`)
+//     console.log(`${i + 1}: ${fruits[i]}`)
 // }
-
-
-
-
-
 
 // Example 4 - Масиви та цикли
 // Напиши скрипт, який виводить у консоль ім'я та телефонний номер користувача.
@@ -96,14 +82,8 @@
 // //
 // for (let i = 0; i < newNames.length; i += 1) {
 //     console.log(`${newNames[i]} - ${newPhones[i]}`);
-    
+
 // }
-
-
-
-
-
-
 
 // Example 5 - Масиви та рядки
 // Напиши скрипт який виводить у консоль усі слова рядка окрім першого та останнього.
@@ -157,11 +137,6 @@
 //  let newString = deletedWords.join(' ');
 //  console.log(newString)
 
-
-
-
-
-
 // Example 6 - Масиви та рядки
 // Напиши скрипт, який «розгортає» рядок (зворотний порядок букв) і виводить її в консоль.
 
@@ -192,11 +167,6 @@
 
 //  console.log(newStr)
 
-
-
-
-
-
 // Example 7 - Сортування масиву
 // Напиши скрипт сортування масиву.
 
@@ -205,11 +175,6 @@
 
 // langs.sort()
 //   console.log(langs)
-
-
-
-
-
 
 // Example 8 - Пошук елемента
 // Напиши скрипт пошуку найменшого числа у масиві.
@@ -226,26 +191,7 @@
 // }
 //     console.log(min);
 
-
-
-
-
-
-
-
-
-
-
-
-
 // Функции
-
-
-
-
-
-
-
 
 // Example 1 - Індекс маси тіла
 // Напиши функцію calcBMI(weight, height) яка розраховує та повертає індекс маси тіла.
@@ -270,33 +216,23 @@
 //   return result.toFixed(1)
 // }
 
-
-
-
 // Example 2 - Найменше з чисел
 // Напиши функцію min(a,b), яка повертає менше з чисел a та b.
 
 // const min = function (a, b) {
-//     let result = 0;
+//   let result = 0;
 
-//     return a < b ?  result = a : result = b
-// }
-
+//   return a < b ? (result = a) : (result = b);
+// };
 
 // console.log(min(2, 5));
 // console.log(min(3, -1));
 // console.log(min(1, 1));
 
-
-
-
-
-
 // Example 3 - Площа прямокутника
 // Напиши функцію getRectArea(dimensions) для обчислення площі прямокутника зі сторонами,
 // значення яких будуть передані до параметра dimensions у вигляді рядки.
 // Значення гарантовано розділені пробілом.
-
 
 // const getRectArea = function (dimensions) {
 //     const result = dimensions.split(' ');
@@ -307,14 +243,10 @@
 
 // console.log(getRectArea('8 11'));
 
-
-
-
-
 // Example 4 - Логування елементів
 // Напиши функцію logItems(items), яка отримує масив та використовує цикл for,
 // який для кожного елемента масиву буде виводити в консоль повідомлення форматі
-    // < номер елемента > - <значення елемента >.Нумерація елементів повинна починатися з 1.
+// < номер елемента > - <значення елемента >.Нумерація елементів повинна починатися з 1.
 
 // Наприклад для першого елемента масиву ['Mango', 'Poly', 'Ajax'] з індексом 0
 //  буде виведено 1 – Mango, а для індексу 2 виведе 3 – Ajax.
@@ -328,10 +260,6 @@
 // console.log(logItems(['Mango', 'Poly', 'Ajax']));
 // console.log(logItems(['🍎', '🍇', '🍑', '🍌', '🍋']));
 
-
-
-
-
 // Example 5 - Логування контактів
 // Напиши функцію printContactsInfo(names, phones) яка виводить у консоль ім'я та телефонний номер користувача.
 // У параметри names та phones будуть передані рядки імен та телефонних номерів, розділені комами.
@@ -339,51 +267,203 @@
 // Кількість імен та телефонів гарантовано однакове.
 
 // const printContactsInfo = function (names, phones) {
+//   const newNames = names.split(' ');
+//   const newPhones = phones.split(' ');
+//   console.log(newNames);
+//   console.log(newPhones);
 
+//   for (let i = 0; i < newNames.length; i += 1) {
+//     console.log(`${newNames[i]} - ${newPhones[i]}`);
+//   }
+// };
 
-// }
-
-// console.log(printContactsInfo( 'Jacob, William, Solomon, Artemis', '89001234567, 89001112233, 890055566377, 890055566300', ));
-
-
-
-
-
+// console.log(
+//   printContactsInfo(
+//     'Jacob, William, Solomon, Artemis',
+//     '89001234567, 89001112233, 890055566377, 890055566300'
+//   )
+// );
 
 // Example 6 - Пошук найбільшого елемента
 // Напиши функцію findLargestNumber(numbers) яка шукає найбільше число в масиві.
 
-
 // const findLargestNumber = function (numbers) {
-//     let findLargestNumber = numbers[0];
-//     for (const number of numbers) {
+//   let findLargestNumber = numbers[0];
+//   for (const number of numbers) {
 //     // console.log(number);
-//         if (number > findLargestNumber) {
-//             findLargestNumber = number;
-
-//         }
+//     if (number > findLargestNumber) {
+//       findLargestNumber = number;
 //     }
-//     return findLargestNumber;
-// }
-
+//   }
+//   return findLargestNumber;
+// };
 
 // console.log(findLargestNumber([2, 17, 94, 1, 23, 37]));
 // console.log(findLargestNumber([49, 4, 7, 83, 12]));
 
+// Example 7 - Середнє значення
+// Напишіть функцію calAverage() яка приймає довільну кількість аргументів і повертає їхнє середнє значення.
+// Усі аргументи будуть лише числами.
+
+// const calAverage = function (numbers) {
+//   let total = 1;
+//   let value = [];
+//   for (const argument of arguments) {
+//     console.log(argument);
+
+//     total *= argument;
+//   }
+//   return total;
+// };
+
+// console.log(calAverage(1, 2, 3, 4));
+// console.log(calAverage(14, 8, 2));
+// console.log(calAverage(27, 43, 2, 8, 36));
+
+// Example 8 - Форматування часу
+// Напиши функцію formatTime(minutes)
+// яка переведе значення minutes(кількість хвилин) у рядок у форматі годин та хвилин HH: MM.
+
+
+// const formatTime = function (minutes) {
+//   const hours = Math.floor(minutes / 60);
+//   const minute = minutes % 60;
+//   console.log(hours);
+//   console.log(minute);
+//   const doubleDigitHours = String(hours).padStart(2, 0);
+//   const doubleDigitMinutes = String(minute).padStart(2, 0);
+//   return `${doubleDigitHours}:${doubleDigitMinutes}`;
+// };
+
+// console.log(formatTime(70)); // "01:10"
+// console.log(formatTime(450)); // "07:30"
+// console.log(formatTime(1441)); // "24:01" ``
 
 
 
 
 
 
+// Example 9 - Колекція курсів (includes, indexOf, push і т.д.)
+// Напишіть функції для роботи з колекцією навчальних курсів courses:
+
+// addCourse(name) - додає курс до кінця колекції
+// removeCourse(name) - видаляє курс з колекції
+// updateCourse(oldName, newName) - змінює ім'я на нове
+
+// const courses = ['HTML', 'CSS', 'JavaScript', 'React', 'PostgreSQL'];
+
+// const addCourse = function (name) {
+//     // let message = '';
+//     courses.push(name);
+    // if (name !== courses) {
+    //     message = 'У вас вже є такий курс';
+
+    // }
+    // return message;
+
+// }
+
+// const removeCourse = function (name) {
+//     const deletedLastElement = courses.splice()
+// }
+
+// addCourse('Express');
+// console.log(courses); // ['HTML', 'CSS', 'JavaScript', 'React', 'PostgreSQL', 'Express']
+// addCourse('CSS'); // 'У вас вже є такий курс'
+
+// removeCourse('React');
+// console.log(courses); // ['HTML', 'CSS', 'JavaScript', 'PostgreSQL', 'Express']
+// // removeCourse('Vue'); // 'Курс з таким іменем не знайдено'
+
+// // updateCourse('Express', 'NestJS');
+// // console.log(courses); // ['HTML', 'CSS', 'JavaScript', 'PostgreSQL', 'NestJS'] ``
+
+
+// const courses = ['HTML', 'CSS', 'JavaScript', 'React', 'PostgreSQL'];
+
+// /** Щоб додати інтерактивности, запитуємо користувача ввести дані - prompt */
+// const courseName = prompt('Введіть назву курсу');
+// const newName = prompt('Введіть нове імʼя');
+
+// const addCourse = function(newCourse) {
+
+//   if (courses.includes(newCourse)) {
+//     console.log('Такий курс вже є');
+//     return // ранній вихід із функції
+//   }
+
+//   courses.push(newCourse);
+//   return courses; // Памʼятайте, що змінна courses це посилання на масив!
+// }
+
+// const removeCourse = function (courseName) {
+  
+//   const index = courses.indexOf(courseName);
+  
+//   if (index === -1) {
+//     console.log('такого курсу нема')
+//     return
+//   }
+  
+//   const deletedCourses = courses.splice(index, 1);
+//   return deletedCourses
+// }
+
+// const updateCourse = function (oldName, newName) {
+//   const index = courses.indexOf(oldName);
+  
+//   if (index === -1) {
+//     console.log('такого курсу нема')
+//     return
+//   }
+
+//   courses[index] = newName
+// }
+
+
+// /** checkCourseName - функція в яку ми винесли перевірку елемнту в масиві. */
+// const checkCourseName = function (value) {
+//   const index = courses.indexOf(value);
+
+//   if (index === -1) {
+//     console.log('такого курсу нема')
+//     return false
+//   } else {
+//     console.log('Такий курс вже є');
+//     return true
+//   }
+// const calculateEngravingPrice = function (message, pricePerWord) {
+//    // Change code below this line
+//     // let newName = typeof Number(message);
+//     // let newMessage = newName.length;
+//     // console.log(newName);
+//     // console.log(newMessage);
+//     // console.log(newMessage * pricePerWord);
+//     let newMessage = message.split(' ');
+//     console.log(newMessage);
+//     console.log(newMessage.length * pricePerWord);
+
+//    // Change code above this line
+// }
+// calculateEngravingPrice("Web-development is creative work", 40);
 
 
 
-Example 7 - Середнє значення
-Напишіть функцію calAverage() яка приймає довільну кількість аргументів і повертає їхнє середнє значення. Усі аргументи будуть лише числами.
 
-``js function calAverage() {}
 
-console.log(calAverage(1, 2, 3, 4));
-console.log(calAverage(14, 8, 2));
-console.log(calAverage(27, 43, 2, 8, 36)); 
+const makeArray = function (firstArray, secondArray, maxLength) {
+    // Change code below this line
+    const newArray = firstArray.concat(secondArray);
+    // console.log(newArray);
+    if (newArray.length > maxLength) {
+        const newElement = newArray.slice(0, maxLength);
+    console.log(newElement);
+  }
+
+
+    // Change code above this line
+}
+makeArray(["Mango", "Poly"], ["Ajax", "Chelsea"], 3);
+makeArray(["Mango", "Poly", "Houston"], ["Ajax", "Chelsea"], 4);
+makeArray(['Earth', 'Jupiter'], ['Neptune', 'Uranus'], 4);
