@@ -452,18 +452,88 @@
 
 
 
-const makeArray = function (firstArray, secondArray, maxLength) {
-    // Change code below this line
-    const newArray = firstArray.concat(secondArray);
-    // console.log(newArray);
-    if (newArray.length > maxLength) {
-        const newElement = newArray.slice(0, maxLength);
-    console.log(newElement);
-  }
+// const makeArray = function (firstArray, secondArray, maxLength) {
+//     // Change code below this line
+//     const newArray = firstArray.concat(secondArray);
+//     // console.log(newArray);
+//     if (newArray.length > maxLength) {
+//         const newElement = newArray.slice(0, maxLength);
+//     console.log(newElement);
+//   }
 
 
-    // Change code above this line
-}
-makeArray(["Mango", "Poly"], ["Ajax", "Chelsea"], 3);
-makeArray(["Mango", "Poly", "Houston"], ["Ajax", "Chelsea"], 4);
-makeArray(['Earth', 'Jupiter'], ['Neptune', 'Uranus'], 4);
+//     // Change code above this line
+// }
+// makeArray(["Mango", "Poly"], ["Ajax", "Chelsea"], 3);
+// makeArray(["Mango", "Poly", "Houston"], ["Ajax", "Chelsea"], 4);
+// makeArray(['Earth', 'Jupiter'], ['Neptune', 'Uranus'], 4);
+
+
+// function filterArray(numbers, value) {
+//    // Change code below this line
+//     const newNumbers = [];
+//     for (const number of numbers) {
+//         if (number > value) {
+//             newNumbers.push(number);
+
+//         }
+    
+//    }
+//     return newNumbers;
+
+//   // Change code above this line
+// }
+// console.log(filterArray([1, 2, 3, 4, 5], 3));
+
+// function getCommonElements(array1, array2) {
+//   // Change code below this line
+//     const newElements = [];
+//     for (let number of array1) {
+//         if (array2.includes(number) && array1.includes(number)) {
+//             newElements.push(number);
+        
+//        }
+//     }
+//         return newElements;
+
+
+//  // Change code above this line
+// }
+// console.log(getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40]));
+
+
+
+
+
+// function getEvenNumbers(start, end) {
+//    // Change code below this line
+//     const numbers = [];
+//     for (let i = start; i < end; i += 1) {
+        
+//         if (i % 2 === 0) {
+//             numbers.push(i);
+//         }
+        
+//     }
+//         return numbers;
+
+
+//     // Change code above this line
+// }
+// console.log(getEvenNumbers(2, 5));
+
+
+
+// function includes(array, value) {
+//   // Change code below this line
+//     for (const number of array) {
+//         if (number === value) {
+//             return true;
+            
+//         }
+        
+//     }
+//     return false;
+//   // Change code above this line
+// }
+// console.log(includes([1, 2, 3, 4, 5], 3));
