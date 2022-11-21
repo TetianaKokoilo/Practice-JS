@@ -62,8 +62,39 @@ console.table(friends);
 // Получаем имена друзей только онлайн
 
 
-const getOnlineFriends = function (allFriends) {
+// const getOnlineFriends = function (allFriends) {
+//     const friendOnline = [];
 
-}
+//     for (const friend of allFriends) {
+//         console.log(friend);
+//         if (friend.online) {
+//             friendOnline.push(friend);
+            
+//         }
+        
+//     }
+//     return friendOnline;
+// }
 
-console.log(getOnlineFriends(friends));
+// console.log(getOnlineFriends(friends));
+
+
+
+// Получаем имена друзей только онлайн
+
+
+// const getOfflineFriends = function (allFriends) {
+//     const friendOffline = [];
+
+//     for (const friend of allFriends) {
+//         console.log(friend);
+//         if (!friend.online) {
+//             friendOffline.push(friend);
+            
+//         }
+        
+//     }
+//     return friendOffline;
+// }
+
+// console.log(getOfflineFriends(friends));
