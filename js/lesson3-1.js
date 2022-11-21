@@ -18,17 +18,19 @@ user.mood = 'happy';
 // console.log(user);
 
 //  * - замінює значення `hobby` на `'skydiving'`
-
-// ['hobby'] = 'skydiving';
-
+user.hobby = 'skydiving';
+console.log(user);
 
 //  * - замінює значення `premium` на `false`
 user.premium = false;
 // console.log(user);
 
 //  * - виводить вміст об'єкта `user` у форматі `ключ:значення` використовуючи `Object.keys()` та `for...of`
-const keys = Object.keys(user);
-for (const key of keys) {
-    // console.log(key);
-    console.log(user[key]);
+// const entries = Object.entries(user);
+// console.log(entries);
+const userKeys = Object.keys(user);
+for (const key of userKeys) {
+    console.log(`${key}: ${ user[key]}`);
+    
 }
+
