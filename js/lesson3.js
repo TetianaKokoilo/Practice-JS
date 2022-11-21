@@ -97,22 +97,36 @@
 //  - increaseQuantity(productName)
 //  - decreaseQuantity(productName)
 
-const cart = {
-    items: [],
-    getItems() { },
-    add(product) { },
-    remove(productName) { },
-    clear() { },
-    countTotalPrice() { },
-    increaseQuantity(productName) { },
-    decreaseQuantity(productName) { },
+// const cart = {
+//     items: [],
+//     getItems() { },
+//     add(product) { },
+//     remove(productName) { },
+//     clear() { },
+//     countTotalPrice() { },
+//     increaseQuantity(productName) { },
+//     decreaseQuantity(productName) { },
+// };
+
+// console.table(cart.getItems());
+
+// cart.add({ name: '🍎', price: 50 });
+// cart.add({ name: '🍋', price: 60 });
+// cart.add({ name: '🍋', price: 60 });
+// cart.add({ name: '🍑', price: 110 });
+
+// console.table(cart.getItems());
+const book = {
+  title: "The Last Kingdom",
+  author: "Bernard Cornwell",
+  genres: ["historical prose", "adventure"],
+  rating: 8.38,
 };
+const keys = Object.keys(book);
 
-console.table(cart.getItems());
-
-cart.add({ name: '🍎', price: 50 });
-cart.add({ name: '🍋', price: 60 });
-cart.add({ name: '🍋', price: 60 });
-cart.add({ name: '🍑', price: 110 });
-
-console.table(cart.getItems());
+for (const key of keys) {
+  // Ключ
+  console.log(key);
+  // Значення властивості
+  console.log(book[key]);
+}
