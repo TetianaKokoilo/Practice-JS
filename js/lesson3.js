@@ -44,16 +44,26 @@ console.table(friends);
 // Получаем имена всех друзей
 
 
-const getAllNames = function (allFriends) {
-    const friendNames = [];
-    for (const friend of allFriends) {
-        // console.log(friend);
-        friendNames.push(friend.name);
+// const getAllNames = function (allFriends) {
+//     const friendNames = [];
+//     for (const friend of allFriends) {
+//         // console.log(friend);
+//         friendNames.push(friend.name);
         
 
-    }
-        return friendNames;
+//     }
+//         return friendNames;
+
+// }
+
+// console.log(getAllNames(friends));
+
+
+// Получаем имена друзей только онлайн
+
+
+const getOnlineFriends = function (allFriends) {
 
 }
 
-console.log(getAllNames(friends));
+console.log(getOnlineFriends(friends));
