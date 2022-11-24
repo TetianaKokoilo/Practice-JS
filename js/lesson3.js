@@ -93,48 +93,48 @@
 //  - increaseQuantity(productName)
 //  - decreaseQuantity(productName)
 
-const cart = {
-  items: [],
-  getItems() {
-    return this.items;
-  },
-  add(product) {
-    this.items.push(product);
-  },
-  remove(productName) {
-    for (let i = 0; i < this.items.length; i++) {
-      const item = this.items[i];
-      if (productName === item.name) {
-        console.log(productName);
-        console.log(i);
-        this.items.splice(i, 1);
-      }
-    }
-  },
-  clear() {
-    this.items = [];
-  },
-  countTotalPrice() {
-      console.log(this.items);
-      let total = 0;
-      for (const item of this.items) {
-          total += item.price;
+// const cart = {
+//   items: [],
+//   getItems() {
+//     return this.items;
+//   },
+//   add(product) {
+//     this.items.push(product);
+//   },
+//   remove(productName) {
+//     for (let i = 0; i < this.items.length; i++) {
+//       const item = this.items[i];
+//       if (productName === item.name) {
+//         console.log(productName);
+//         console.log(i);
+//         this.items.splice(i, 1);
+//       }
+//     }
+//   },
+//   clear() {
+//     this.items = [];
+//   },
+//   countTotalPrice() {
+//       console.log(this.items);
+//       let total = 0;
+//       for (const item of this.items) {
+//           total += item.price;
         
-      }
-      return total;
+//       }
+//       return total;
             
         
-      },
+//       },
         
-  increaseQuantity(productName) {},
-?};
+//   increaseQuantity(productName) {},
+// ?};
 
-// console.log(cart.getItems());
+// // console.log(cart.getItems());
 
-cart.add({ name: '🍎', price: 50 });
-cart.add({ name: '🍋', price: 60 });
-cart.add({ name: '🍋', price: 60 });
-cart.add({ name: '🍑', price: 110 });
+// cart.add({ name: '🍎', price: 50 });
+// cart.add({ name: '🍋', price: 60 });
+// cart.add({ name: '🍋', price: 60 });
+// cart.add({ name: '🍑', price: 110 });
 
 // console.table(cart.getItems());
 
