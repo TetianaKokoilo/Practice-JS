@@ -388,7 +388,7 @@
 
 
 // Example 5 - Операція spread
-// Напиши функцію createContact(contact) так, щоб вона повертала новий об'єкт контакту 
+// Напиши функцію createContact(contact) так, щоб вона повертала новий об'єкт контакту
 // з доданими властивостями id та createdAt, а також list зі значенням "default" якщо в contact немає такої властивості.
 
 // Рішення
@@ -416,3 +416,34 @@
 
 // console.log(newContact)
 // console.log(contact)
+
+
+
+
+
+
+
+
+// Example 6 - Операція rest
+// Напиши функцію transformUsername(user) так, 
+// щоб вона повертала новий об'єкт із властивістю fullName, замість firstName та lastName.
+
+// // Рішення
+// const transformUsername = function ({firstName, lastName, ...restProps}) {
+//   // your code
+//    return {
+//     fullName: `${firstName} ${lastName}`,
+//     ...restProps
+//   }
+// }
+
+// const user = {
+//   id: 1,
+//   firstName: 'Jacob',
+//   lastName: 'Mercer',
+//   email: 'j.mercer@mail.com',
+//   friendCount: 40,
+// }
+
+// const newUser = transformUsername(user);
+// console.log(newUser);
