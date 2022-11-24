@@ -425,7 +425,7 @@
 
 
 // Example 6 - Операція rest
-// Напиши функцію transformUsername(user) так, 
+// Напиши функцію transformUsername(user) так,
 // щоб вона повертала новий об'єкт із властивістю fullName, замість firstName та lastName.
 
 // // Рішення
@@ -447,3 +447,21 @@
 
 // const newUser = transformUsername(user);
 // console.log(newUser);
+
+
+
+
+
+const apartment = {
+  descr: "Spacious apartment in the city center",
+  rating: 4,
+  price: 2153,
+};
+const keys = ['descr', 'rating', 'price'];
+const values = ["Spacious apartment in the city center", 4, 2153];
+// Change code below this line
+for (const key in apartment) {
+    console.log(key);
+    
+    console.log(apartment[key]);
+}
