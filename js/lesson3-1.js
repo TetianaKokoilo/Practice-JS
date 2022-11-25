@@ -452,15 +452,44 @@
 
 
 
-const apartment = {
-  descr: "Spacious apartment in the city center",
-  rating: 4,
-  price: 2153,
-};
-const values = [];
-// Change code below this line
-const keys = Object.keys(apartment);
-for (let key of keys) {
-  console.log(key);
-  console.log(apartment[key]);
+// function countProps(object) {
+//   // Change code below this line
+//   let propCount = 0;
+//   const keys = Object.keys(object);
+//   console.log(keys);
+//   for (const key of keys) {
+//     propCount += 1
+    
+//   }
+
+//   return propCount;
+//   // Change code above this line
+// }
+// console.log(countProps({
+//   name: "Mango",
+//   age: 2
+// }));
+// console.log(countProps({
+//   mail: "poly@mail.com",
+//   isOnline: true,
+//   score: 500
+// }));
+
+
+function countTotalSalary(salaries) {
+  let totalSalary = 0;
+  // Change code below this line
+  const values = Object.values(salaries);
+  console.log(values);
+  for (const value of values) {
+    totalSalary += value;
+    
+  }
+  // Change code above this line
+  return totalSalary;
 }
+console.log(countTotalSalary({
+  mango: 100,
+  poly: 150,
+  alfred: 80
+}));
