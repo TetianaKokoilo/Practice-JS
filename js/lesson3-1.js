@@ -136,7 +136,7 @@
 
 //     this.balance += amount;
 //     const newTransaction = this.createTransaction(amount, Types.DEPOSIT);
-    
+
 //     this.transactions.push(newTransaction)
 //   },
 
@@ -187,7 +187,7 @@
 //    */
 //   getTransactionTotal(type) {
 //     let result = 0;
-    
+
 //     for (const transaction of this.transactions) {
 //       if (type === transaction.type) {
 //         result += transaction.amount
@@ -393,11 +393,11 @@
 
 // Рішення
 // const createContact = function(contact) {
-  // 1. Створити новий обʼєкт
-  // 2. Додати до нього нові ключі
-  //   id
-  //   createdAt
-  //   list, якщо його нема, то дати дефолтне значення
+// 1. Створити новий обʼєкт
+// 2. Додати до нього нові ключі
+//   id
+//   createdAt
+//   list, якщо його нема, то дати дефолтне значення
 //   return {
 //     list: 'default',
 //     ...contact,
@@ -457,11 +457,10 @@ const apartment = {
   rating: 4,
   price: 2153,
 };
-const keys = ['descr', 'rating', 'price'];
-const values = ["Spacious apartment in the city center", 4, 2153];
+const values = [];
 // Change code below this line
-for (const key in apartment) {
-    console.log(key);
-    
-    console.log(apartment[key]);
+const keys = Object.keys(apartment);
+for (let key of keys) {
+  console.log(key);
+  console.log(apartment[key]);
 }
