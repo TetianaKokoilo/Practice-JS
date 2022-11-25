@@ -589,3 +589,36 @@
 
 
 
+// const highTemperatures = {
+//   yesterday: 28,
+//   today: 26,
+//   tomorrow: 33,
+// };
+// // Change code below this line
+
+// const { yesterday: highYesterday, today: highToday, tomorrow: highTomorrow, highIcon = "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg" } = highTemperatures;
+
+
+// // Change code above this line
+// const meanTemperature = (highYesterday + highToday + highTomorrow) / 3;
+
+
+
+
+
+
+
+// Change code below this line
+function add(...args) {
+  console.log(args);
+  let sum = 0;
+  for (const arg of args) {
+    sum += arg;
+    
+    
+  }
+  return sum;
+  // Change code above this line
+}
+
+console.log(add(15, 27));
