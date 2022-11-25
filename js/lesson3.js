@@ -101,16 +101,16 @@
 //   add(product) {
 //     this.items.push(product);
 //   },
-//   remove(productName) {
-//     for (let i = 0; i < this.items.length; i++) {
-//       const item = this.items[i];
-//       if (productName === item.name) {
-//         console.log(productName);
-//         console.log(i);
-//         this.items.splice(i, 1);
-//       }
-//     }
-//   },
+  remove(productName) {
+    for (let i = 0; i < this.items.length; i++) {
+      const item = this.items[i];
+      if (productName === item.name) {
+        console.log(productName);
+        console.log(i);
+        this.items.splice(i, 1);
+      }
+    }
+  },
 //   clear() {
 //     this.items = [];
 //   },

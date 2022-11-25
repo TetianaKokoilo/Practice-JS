@@ -645,3 +645,100 @@
 
 // console.log(addOverNum(50, 15, 27));
 // console.log(addOverNum(10, 12, 4, 11, 48, 10, 8));
+
+
+
+
+
+// function findMatches(firstArgs, ...args) {
+//   const matches = []; // Don't change this line
+//   for (const arg of args) {
+//     if (firstArgs.includes(arg)) {
+//       matches.push(arg);
+
+//     }
+    
+//   }
+
+//   // Change code above this line
+//   return matches;
+// }
+
+// console.log(findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7));
+
+
+
+
+
+
+// const atTheOldToad = {
+//   potions: ["Speed potion", "Dragon breath", "Stone skin"],
+//   removePotion(potionName) {
+//     for (let i = 0; i < this.potions.length; i += 1) {
+//       const potion = this.potions[i];
+//       // console.log(potion);
+//       if (potionName === potion) {
+        
+//         return this.potions.slice(i, 1);
+
+//       }
+      
+//     }
+//     // Change code below this line
+
+        
+//     // Change code above this line
+//   },
+// };
+// console.log(atTheOldToad.removePotion("Dragon breath"));
+
+
+
+
+
+
+const atTheOldToad = {
+  potions: [
+    { name: "Speed potion", price: 460 },
+    { name: "Dragon breath", price: 780 },
+    { name: "Stone skin", price: 520 },
+  ],
+  // Change code below this line
+  getPotions() {
+    return this.potions;
+  },
+  addPotion(newPotion) {
+    for (const item of this.potions) {
+      if (item.name === newPotion.name) {
+        return `Error! Potion ${newPotion} is already in your inventory!`;
+      }
+    }
+   const newProduct = {
+     ...newPotion,
+   };
+
+    this.potions.push(newPotion);
+  },
+  removePotion(potionName) {
+    for (let i = 0; i < this.potions.length; i += 1) {
+      const potion = this.potions[i];
+      if (potionName === potion.name) {
+        this.potions.splice(i, 1);
+      }
+      
+    }
+  },
+  updatePotionName(oldName, newName) {
+    let result = `Potion ${oldName} is not in inventory!`;
+    for (let i = 0; i < this.potions.length; i += 1) {
+      const potion = newName;
+      result = `Found  ${oldName} change to  ${newName}`;
+      
+    }
+    
+    
+  return result
+   
+  },
+  // Change code above this line
+};
