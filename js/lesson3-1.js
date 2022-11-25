@@ -582,3 +582,10 @@
 // }
 // console.log(calculateTotalPrice("Radar"));
 // console.log(calculateTotalPrice("Scavxxvner"));
+
+
+
+
+
+
+
