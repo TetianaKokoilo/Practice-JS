@@ -750,32 +750,73 @@
 
 
 
-function processCall(recipient, onAvailable, onNotAvailable) {
-  // Імітуємо доступність абонента випадковим числом
-  const isRecipientAvailable = Math.random() > 0.5;
+// function processCall(recipient, onAvailable, onNotAvailable) {
+//   // Імітуємо доступність абонента випадковим числом
+//   const isRecipientAvailable = Math.random() > 0.5;
 
-  if (!isRecipientAvailable) {
-    onNotAvailable(recipient);
-    return;
+//   if (!isRecipientAvailable) {
+//     onNotAvailable(recipient);
+//     return;
+//   }
+
+//   onAvailable(recipient);
+// }
+
+// function takeCall(name) {
+//   console.log(`З'єднуємо з ${name}, очікуйте...`);
+//   // Логіка прийняття дзвінка
+// }
+
+// function activateAnsweringMachine(name) {
+//   console.log(`Абонент ${name} недоступний, залиште повідомлення.`);
+//   // Логіка активації автовідповідача
+// }
+
+// function leaveHoloMessage(name) {
+//   console.log(`Абонент ${name} недоступний, записуємо голограму.`);
+//   // Логіка запису голограми
+// }
+
+// processCall("Манго", takeCall, activateAnsweringMachine);
+// processCall("Полі", takeCall, leaveHoloMessage);
+
+
+
+const tweets = [
+  { id: "000", likes: 5, tags: ["js", "nodejs"] },
+  { id: "001", likes: 2, tags: ["html", "css"] },
+  { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
+  { id: "003", likes: 8, tags: ["css", "react"] },
+  { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
+];
+
+const getTags = tweets =>
+  tweets.reduce((allTags, tweet) => {
+    allTags.push(...tweet.tags);
+
+    return allTags;
+  }, []);
+
+const tags = getTags(tweets);
+
+// Винесемо callback-функцію окремо, а в reducе передамо посилання на неї.
+// Це стандартна практика, якщо callback-функція досить велика.
+
+// Якщо в об'єкті-акумуляторі acc відсутня своя властивість з ключем tag,
+// то створюємо її і записуємо їй значення 0.
+// В іншому випадку збільшуємо значення на 1.
+const getTagStats = (acc, tag) => {
+  if (!acc.hasOwnProperty(tag)) {
+    acc[tag] = 0;
   }
 
-  onAvailable(recipient);
-}
+  acc[tag] += 1;
 
-function takeCall(name) {
-  console.log(`З'єднуємо з ${name}, очікуйте...`);
-  // Логіка прийняття дзвінка
-}
+  return acc;
+};
 
-function activateAnsweringMachine(name) {
-  console.log(`Абонент ${name} недоступний, залиште повідомлення.`);
-  // Логіка активації автовідповідача
-}
+// Початкове значення акумулятора - це порожній об'єкт {}
+const countTags = tags => tags.reduce(getTagStats, {});
 
-function leaveHoloMessage(name) {
-  console.log(`Абонент ${name} недоступний, записуємо голограму.`);
-  // Логіка запису голограми
-}
-
-processCall("Манго", takeCall, activateAnsweringMachine);
-processCall("Полі", takeCall, leaveHoloMessage);
+const tagCount = countTags(tags);
+console.log(tagCount);
