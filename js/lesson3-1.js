@@ -780,16 +780,3 @@
 // processCall("Манго", takeCall, activateAnsweringMachine);
 // processCall("Полі", takeCall, leaveHoloMessage);
 
-
-const students = [
-  { name: "Манго", score: 83, courses: ["математика", "фізика"] },
-  { name: "Полі", score: 59, courses: ["інформатика", "математика"] },
-  { name: "Аякс", score: 37, courses: ["фізика", "біологія"] },
-  { name: "Ківі", score: 94, courses: ["література", "інформатика"] },
-];
-const uniqueSortedCourses = students
-  .flatMap(student => student.courses)
-  .filter((course, index, array) => array.indexOf(course) === index)
-  .sort((a, b) => a.localeCompare(b));
-
-console.log(uniqueSortedCourses); // ['біологія', 'інформатика', 'література', 'математика', 'фізика']v
