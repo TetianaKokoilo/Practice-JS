@@ -20,6 +20,11 @@
 
 // fnA('qweqwe', fnB);
 
+
+
+
+
+
 /*
  * функция doMath(a, b, callback)
  */
@@ -38,6 +43,12 @@
 //     return x - y;
 // });
 
+
+
+
+
+
+
 /*
  * Отложенный вызов: регистрация событий
  */
@@ -49,6 +60,11 @@
 // };
 
 // buttonRef.addEventListener('click', handleBtnClick);
+
+
+
+
+
 
 /*
  * Отложенный вызов: геолокация
@@ -69,6 +85,11 @@
 //     onGetPositionError,
 // );
 
+
+
+
+
+
 /*
  * Отложенный вызов: интервалы
  */
@@ -80,6 +101,12 @@
 // console.log('В коде перед таймаутом');
 // setTimeout(callback, 2000);
 // console.log('В коде после таймаута');
+
+
+
+
+
+
 
 /*
  * Отложенный вызов: http-запрос
@@ -96,6 +123,12 @@
 // fetch('https://pokeapi.co/api/v2/pokemon')
 //     .then(res => res.json())
 //     .then(onRequestSuccess);
+
+
+
+
+
+
 
 /*
  * Фильтр
