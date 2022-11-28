@@ -234,18 +234,18 @@
 // makeDish('Poly', 'супик');
 // makeDish('Poly', 'кофе');
 
-const makeSheff = function (name) {
-    const innverVar = 555;
-    const message = 'hello';
+// const makeSheff = function (name) {
+//     const innverVar = 555;
+//     const message = 'hello';
 
-    const makeDish = function (dish) {
-        console.log(message);
-        console.log(innverVar);
-        console.log(`${name} готовит ${dish}`);
-    };
+//     const makeDish = function (dish) {
+//         console.log(message);
+//         console.log(innverVar);
+//         console.log(`${name} готовит ${dish}`);
+//     };
 
-    return makeDish;
-};
+//     return makeDish;
+// };
 
 // const mango = makeSheff('Mango');
 
@@ -262,6 +262,12 @@ const makeSheff = function (name) {
 // poly('омлет');
 
 // console.dir(mango);
+
+
+
+
+
+
 
 /*
  * Округлятор 🤷‍♂️
