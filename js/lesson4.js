@@ -286,11 +286,11 @@
 // console.log(rounder(5.1234, 2));
 // console.log(rounder(3.4567, 3));
 
-const rounder = function (places) {
-    return function (number) {
-        return Number(number.toFixed(places));
-    };
-};
+// const rounder = function (places) {
+//     return function (number) {
+//         return Number(number.toFixed(places));
+//     };
+// };
 
 // const rounder2 = rounder(2);
 // const rounder3 = rounder(3);
@@ -304,6 +304,11 @@ const rounder = function (places) {
 // console.log(rounder2(5.1234));
 // console.log(rounder3(3.4567));
 // console.log(rounder3(10.67667));
+
+
+
+
+
 
 /*
  * Приватные данные и функции - скрытие реализации, интерфейс
