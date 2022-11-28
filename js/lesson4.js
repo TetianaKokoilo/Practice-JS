@@ -314,33 +314,33 @@
  * Приватные данные и функции - скрытие реализации, интерфейс
  */
 
-const salaryManagerFactory = function (employeeName, baseSalary = 0) {
-    let salary = baseSalary;
+// const salaryManagerFactory = function (employeeName, baseSalary = 0) {
+//     let salary = baseSalary;
 
-    return {
-        raise(amount) {
-            if (amount > 1000) {
-                return 'Ты офигел?';
-            }
+//     return {
+//         raise(amount) {
+//             if (amount > 1000) {
+//                 return 'Ты офигел?';
+//             }
 
-            salary += amount;
-        },
-        lower(amount) {
-            salary -= amount;
-        },
-        current() {
-            return `Текущая зарпалата ${employeeName} - ${salary}`;
-        },
-    };
-};
+//             salary += amount;
+//         },
+//         lower(amount) {
+//             salary -= amount;
+//         },
+//         current() {
+//             return `Текущая зарпалата ${employeeName} - ${salary}`;
+//         },
+//     };
+// };
 
-const salaryManager = salaryManagerFactory('Mango', 5000);
+// const salaryManager = salaryManagerFactory('Mango', 5000);
 
-console.log(salaryManager.current());
+// console.log(salaryManager.current());
 
-console.log(salaryManager.raise(10000000));
+// console.log(salaryManager.raise(10000000));
 
-console.log(salaryManager.current());
+// console.log(salaryManager.current());
 
 // const myLibFactory = function () {
 //     let value = 0;
@@ -365,3 +365,10 @@ console.log(salaryManager.current());
 // console.log(myLib.getValue());
 // myLib.add(10);
 // console.log(myLib.getValue());
+
+
+
+
+
+
+
