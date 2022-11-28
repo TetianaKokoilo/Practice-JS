@@ -12,6 +12,42 @@
 
 
 // your code here
+const product = {
+  name: "chocolate",
+  price: 34,
+  quantity: 5
+}
 
-createProduct({ name: '🍎', price: 30, quantity: 3 }, logProduct);
-createProduct({ name: '🍋', price: 20, quantity: 5 }, logTotalPrice);
+const createProduct = (obj, callback) => {
+  // створили новий обʼєкт товару, оператором спред забралм всі властивости із параметра obj
+  const product = {
+    ...obj,
+    id: 1
+  };
+
+  // викликали функцію callback яку передають в параметрах. Передали їй новий обʼєкт як аргумент
+  // Повернули результат виконання колбека
+  return callback(product)
+};
+
+// Створили просто окрему функцію, яка приймає один параметр(будь-що) і виводить його в консоль. 
+const logger = (val) => {
+  console.log(val)
+}
+
+// Створили ще одну окрему функцію якак приймає параметром обʼєкт(товар) і рахує вартість.
+const calculateTotalPrice = ({price, quantity}) => {
+  const total = price * quantity;
+  return total
+}
+
+/**
+ * коротша форма запису:
+ * const logger = val => console.log(val)
+ * const calculateTotalPrice = ({price, quantity}) => price * quantity
+ */
+
+//викликали createProduct. Передали два аргументи: обʼєкт товара і будь-яку функцію колбек
+createProduct(product, logger); // колбеком буде функція looger
+const totalPrice = createProduct(product, calculateTotalPrice); // колбеком буде функція calculateTotalPrice
+console.log(totalPrice)

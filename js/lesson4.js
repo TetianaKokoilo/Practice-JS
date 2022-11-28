@@ -340,7 +340,7 @@
 
 // console.log(salaryManager.raise(10000000));
 
-// console.log(salaryManager.current());
+console.log(salaryManager.current());
 
 // const myLibFactory = function () {
 //     let value = 0;
