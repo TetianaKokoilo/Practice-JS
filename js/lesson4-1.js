@@ -226,20 +226,41 @@
 // Example 8 - Метод forEach
 // Виконайте рефакторинг коду за допомогою методу forEach та стрілочні функції.
 
-function printContactsInfo({ names, phones }) {
-    const nameList = names.split(',');
+// function printContactsInfo({ names, phones }) {
+//     const nameList = names.split(',');
  
-    const phoneList = phones.split(',');
-    //  класничний for
-//   for (let i = 0; i < nameList.length; i += 1) {
-//     console.log(`${nameList[i]}: ${phoneList[i]}`);
+//     const phoneList = phones.split(',');
+//     //  класничний for
+// //   for (let i = 0; i < nameList.length; i += 1) {
+// //     console.log(`${nameList[i]}: ${phoneList[i]}`);
+// //   }
+//      nameList.forEach((name, index) => {
+//     console.log(`${name}: ${phoneList[index]}`);
+//   });
+// }
+
+// printContactsInfo({
+//   names: 'Jacob,William,Solomon,Artemis',
+//   phones: '89001234567,89001112233,890055566377,890055566300',
+// });
+
+
+
+
+
+// Example 9 - Метод forEach
+// Виконайте рефакторинг коду за допомогою методу forEach та стрілочні функції.
+
+function calсulateAverage(...args) {
+  let total = 0;
+//   for (let i = 0; i < args.length; i++) {
+//     total += args[i];
 //   }
-     nameList.forEach((name, index) => {
-    console.log(`${name}: ${phoneList[index]}`);
-  });
+    args.forEach(arg => total += arg);
+
+  return total / args.length;
 }
 
-printContactsInfo({
-  names: 'Jacob,William,Solomon,Artemis',
-  phones: '89001234567,89001112233,890055566377,890055566300',
-});
+console.log(calсulateAverage(1, 2, 3, 4)); // 2.5
+console.log(calсulateAverage(14, 8, 2)); // 8
+console.log(calсulateAverage(27, 43, 2, 8, 36)); // 23.2
