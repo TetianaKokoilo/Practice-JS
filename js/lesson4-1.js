@@ -204,16 +204,42 @@
 // Example 7 - Метод forEach
 // Виконайте рефакторинг коду за допомогою методу forEach та стрілочні функції.
 
-const logItems = (items) => {
-    console.log(items);
-    // Класичний for
-//   for (let i = 0; i < items.length; i += 1) {
-//     console.log(`${i + 1} - ${items[i]}`);
-//     }
+// const logItems = (items) => {
+//     console.log(items);
+//     // Класичний for
+// //   for (let i = 0; i < items.length; i += 1) {
+// //     console.log(`${i + 1} - ${items[i]}`);
+// //     }
     
-    items.forEach ((item, index) => console.log(`${index + 1} - ${item}`));
+//     items.forEach ((item, index) => console.log(`${index + 1} - ${item}`));
     
+// }
+
+// logItems(['Mango', 'Poly', 'Ajax']);
+// logItems(['🍎', '🍇', '🍑', '🍌', '🍋']);
+
+
+
+
+
+
+// Example 8 - Метод forEach
+// Виконайте рефакторинг коду за допомогою методу forEach та стрілочні функції.
+
+function printContactsInfo({ names, phones }) {
+    const nameList = names.split(',');
+ 
+    const phoneList = phones.split(',');
+    //  класничний for
+//   for (let i = 0; i < nameList.length; i += 1) {
+//     console.log(`${nameList[i]}: ${phoneList[i]}`);
+//   }
+     nameList.forEach((name, index) => {
+    console.log(`${name}: ${phoneList[index]}`);
+  });
 }
 
-logItems(['Mango', 'Poly', 'Ajax']);
-logItems(['🍎', '🍇', '🍑', '🍌', '🍋']);
+printContactsInfo({
+  names: 'Jacob,William,Solomon,Artemis',
+  phones: '89001234567,89001112233,890055566377,890055566300',
+});
