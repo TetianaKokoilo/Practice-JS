@@ -95,13 +95,11 @@
 //   },
 // };
 
-// const handleSuccess = (amount) => {
-//   console.log(`${amount} успішно опрацьовано!`)
-// }
+// const handleSuccess = (amount) => console.log(`${amount} успішно опрацьовано!`)
 
-// const handleError = (amount, message = 'Невідомо') => {
-//   console.log(`${amount} Не опрацьовано! По причині: ${message}`)
-// }
+
+// const handleError = (amount, message = 'Невідомо') => console.log(`${amount} Не опрацьовано! По причині: ${message}`)
+
 // account.withdraw(2000, handleSuccess, handleError);
 // account.withdraw(600, handleSuccess, handleError);
 // account.withdraw(300, handleSuccess, handleError);
@@ -183,16 +181,16 @@
 // Example 4 - Стрілочні функції
 // Виконайте рефакторинг коду за допомогою стрілочних функцій.
 
-const createProduct = (partialProduct, callback) => {
-  const product = { id: Date.now(), ...partialProduct };
-  callback(product);
-}
+// const createProduct = (partialProduct, callback) => {
+//   const product = { id: Date.now(), ...partialProduct };
+//   callback(product);
+// }
 
-const logProduct = product => console.log(product);
-
-
-const logTotalPrice = product => console.log(product.price * product.quantity);
+// const logProduct = product => console.log(product);
 
 
-createProduct({ name: '🍎', price: 30, quantity: 3 }, logProduct);
-createProduct({ name: '🍋', price: 20, quantity: 5 }, logTotalPrice);
+// const logTotalPrice = product => console.log(product.price * product.quantity);
+
+
+// createProduct({ name: '🍎', price: 30, quantity: 3 }, logProduct);
+// createProduct({ name: '🍋', price: 20, quantity: 5 }, logTotalPrice);
