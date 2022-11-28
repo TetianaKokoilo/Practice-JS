@@ -116,58 +116,83 @@
 
 
 // Example 3 - Коллбек функції
-// Напишіть функцію each(array, callback), яка першим параметром очікує масив, 
+// Напишіть функцію each(array, callback), яка першим параметром очікує масив,
 
 // а другим - функцію, яка застосовується до кожного елемента масиву.
 // Функція each повинна повернути новий масив, елементами якого будуть результати виклику коллбека.
 
-const employees = [
-  { name: 'Artur', bonus: 64.5 },
-  { name: 'Ivan', bonus: 49.2 },
-  { name: 'Makar', bonus: 36 },
-  { name: 'Anastasiya', bonus: 25 },
-  { name: 'Olha', bonus: 165.13 },
-]
+// const employees = [
+//   { name: 'Artur', bonus: 64.5 },
+//   { name: 'Ivan', bonus: 49.2 },
+//   { name: 'Makar', bonus: 36 },
+//   { name: 'Anastasiya', bonus: 25 },
+//   { name: 'Olha', bonus: 165.13 },
+// ]
 
-// створили функцію each, яка чекає масив і функцію в параметрах
-const each = (arr, callback) => {
-  const resultArr = []; // новий масав який будемо повертати
+// // створили функцію each, яка чекає масив і функцію в параметрах
+// const each = (arr, callback) => {
+//   const resultArr = []; // новий масав який будемо повертати
 
-  /** 
-   * перебираємо циклом масив, диструктурувавши елемент на кожній ітерації
-   * запис еквівалентний цьому:
-      for (const item of arr) {
-        resultArr.push({
-          name: item.name,
-          bonus: callback(item.bonus)
-        })
-      }
-  */
-    for (const { name, bonus } of arr) {
-    // на кожній ітерації викликаємо колбек для бонусу і кладемо новий обʼєкт в новий масив
-    resultArr.push({
-      name,
-      bonus: callback(bonus)
-    })
-  }
+//   /**
+//    * перебираємо циклом масив, диструктурувавши елемент на кожній ітерації
+//    * запис еквівалентний цьому:
+//       for (const item of arr) {
+//         resultArr.push({
+//           name: item.name,
+//           bonus: callback(item.bonus)
+//         })
+//       }
+//   */
+//     for (const { name, bonus } of arr) {
+//     // на кожній ітерації викликаємо колбек для бонусу і кладемо новий обʼєкт в новий масив
+//     resultArr.push({
+//       name,
+//       bonus: callback(bonus)
+//     })
+//   }
 
-  return resultArr; // повертаємо новий масив
+//   return resultArr; // повертаємо новий масив
+// }
+
+// const roundBonus = value => Math.floor(value) // те саме, що
+
+// // 1. const roundBonus = (value) => {
+// //   return Math.floor(value)
+// // }
+
+// // 2. function roundBonus (value) {
+// //   return Math.floor(value)
+// // }
+
+// // 3. const roundBonus = function (value) {
+// //   return Math.floor(value)
+// // }
+
+// // викликали each, передали їй масив з даними і функцію як колбек. Очікуємо отримати новий масив в результат
+// const roundedBonuses = each(employees, roundBonus);
+// console.log(roundedBonuses);
+
+
+
+
+
+
+
+
+
+// Example 4 - Стрілочні функції
+// Виконайте рефакторинг коду за допомогою стрілочних функцій.
+
+const createProduct = (partialProduct, callback) => {
+  const product = { id: Date.now(), ...partialProduct };
+  callback(product);
 }
 
-const roundBonus = value => Math.floor(value) // те саме, що
+const logProduct = product => console.log(product);
 
-// 1. const roundBonus = (value) => {
-//   return Math.floor(value)
-// }
 
-// 2. function roundBonus (value) {
-//   return Math.floor(value)
-// }
+const logTotalPrice = product => console.log(product.price * product.quantity);
 
-// 3. const roundBonus = function (value) {
-//   return Math.floor(value)
-// }
 
-// викликали each, передали їй масив з даними і функцію як колбек. Очікуємо отримати новий масив в результат
-const roundedBonuses = each(employees, roundBonus);
-console.log(roundedBonuses);
+createProduct({ name: '🍎', price: 30, quantity: 3 }, logProduct);
+createProduct({ name: '🍋', price: 20, quantity: 5 }, logTotalPrice);
