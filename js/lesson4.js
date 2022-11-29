@@ -747,69 +747,121 @@
  *    - приводит элементы к строке и сортирует по [Unicode](https://unicode-table.com/en/)
  */
 
-const numbers = [1, 9, 6, 2, 3];
-// numbers.sort();
-// console.log('numbers', numbers);
+// const numbers = [1, 9, 6, 2, 3];
+// // numbers.sort();
+// // console.log('numbers', numbers);
 
-const letters = ['b', 'B', 'a', 'A'];
-// letters.sort();
-// console.log('letters', letters);
+// const letters = ['b', 'B', 'a', 'A'];
+// // letters.sort();
+// // console.log('letters', letters);
 
-/*
- * compareFunction - функция сравнения (callback)
- * Элементы массива сортируются в соответствии с её возвращаемым значением
- *  - eсли compareFunction(A, B) меньше 0, сортировка поставит A перед B
- *  - если compareFunction(A, B) больше 0, сортировка поставит B перед A
- *  - если compareFunction(A, B) вернёт 0, сортировка оставит A и B на неизменными по отношению друг к другу, но отсортирует их по отношению ко всем другим элементам.
- */
+// /*
+//  * compareFunction - функция сравнения (callback)
+//  * Элементы массива сортируются в соответствии с её возвращаемым значением
+//  *  - eсли compareFunction(A, B) меньше 0, сортировка поставит A перед B
+//  *  - если compareFunction(A, B) больше 0, сортировка поставит B перед A
+//  *  - если compareFunction(A, B) вернёт 0, сортировка оставит A и B на неизменными по отношению друг к другу, но отсортирует их по отношению ко всем другим элементам.
+//  */
 
-// numbers.sort((curEl, nextEl) => {
-//     return nextEl - curEl;
+// // numbers.sort((curEl, nextEl) => {
+// //     return nextEl - curEl;
+// // });
+
+// /*
+//  * Как сделать копию массива чтобы не сортировать оригинальный
+//  * - Array.prototype.slice()
+//  * - Операция spread
+//  */
+
+// const descSortedNumbers = [...numbers].sort((a, b) => b - a);
+// const ascSortedNumbers = [...numbers].sort((a, b) => a - b);
+// // console.log('descSortedNumbers', descSortedNumbers);
+// // console.log('ascSortedNumbers', ascSortedNumbers);
+
+// /*
+//  * Кастомная сортировка сложных типов
+//  */
+// const players = [
+//     { id: 'player-1', name: 'Mango', timePlayed: 310, online: false },
+//     { id: 'player-2', name: 'Poly', timePlayed: 470, online: true },
+//     { id: 'player-3', name: 'Aiwi', timePlayed: 230, online: true },
+//     { id: 'player-4', name: 'Ajax', timePlayed: 150, online: false },
+//     { id: 'player-5', name: 'Chelsey', timePlayed: 80, online: true },
+// ];
+
+// // По игровому времени
+// const sortedByBestPlayers = [...players].sort(
+//     (prevPlayer, nextPlayer) => nextPlayer.timePlayed - prevPlayer.timePlayed,
+// );
+// // console.table(sortedByBestPlayers);
+
+// const sortedByWorstPlayers = [...players].sort(
+//     (prevPlayer, nextPlayer) => prevPlayer.timePlayed - nextPlayer.timePlayed,
+// );
+// // console.table(sortedByWorstPlayers);
+
+// const byName = [...players].sort((a, b) => {
+//     const result = a.name[0] > b.name[0];
+
+//     if (result) {
+//         return 1;
+//     }
+
+//     if (!result) {
+//         return -1;
+//     }
 // });
 
-/*
- * Как сделать копию массива чтобы не сортировать оригинальный
- * - Array.prototype.slice()
- * - Операция spread
+// console.table(byName);
+
+
+
+
+
+
+
+
+
+/* 8
+ * Array.prototype.flat(depth)
+ * - Разглаживает массив до указанной глубины
+ * - По умолчанию глубина 1
  */
 
-const descSortedNumbers = [...numbers].sort((a, b) => b - a);
-const ascSortedNumbers = [...numbers].sort((a, b) => a - b);
-// console.log('descSortedNumbers', descSortedNumbers);
-// console.log('ascSortedNumbers', ascSortedNumbers);
+// const array = [1, 2, [4, [5]], [6, [7, 8, [9]]]];
+// // console.log(array.flat(3));
 
-/*
- * Кастомная сортировка сложных типов
- */
-const players = [
-    { id: 'player-1', name: 'Mango', timePlayed: 310, online: false },
-    { id: 'player-2', name: 'Poly', timePlayed: 470, online: true },
-    { id: 'player-3', name: 'Aiwi', timePlayed: 230, online: true },
-    { id: 'player-4', name: 'Ajax', timePlayed: 150, online: false },
-    { id: 'player-5', name: 'Chelsey', timePlayed: 80, online: true },
-];
+// /*
+//  * Array.prototype.flatMap(callback)
+//  * - Комбинация map + flat
+//  */
 
-// По игровому времени
-const sortedByBestPlayers = [...players].sort(
-    (prevPlayer, nextPlayer) => nextPlayer.timePlayed - prevPlayer.timePlayed,
-);
-// console.table(sortedByBestPlayers);
+// const tweets = [
+//     { id: '000', likes: 5, tags: ['js', 'nodejs'] },
+//     { id: '001', likes: 2, tags: ['html', 'css'] },
+//     { id: '002', likes: 17, tags: ['html', 'js', 'nodejs'] },
+//     { id: '003', likes: 8, tags: ['css', 'react'] },
+//     { id: '004', likes: 0, tags: ['js', 'nodejs', 'react'] },
+// ];
 
-const sortedByWorstPlayers = [...players].sort(
-    (prevPlayer, nextPlayer) => prevPlayer.timePlayed - nextPlayer.timePlayed,
-);
-// console.table(sortedByWorstPlayers);
+// // const tags = tweets.flatMap(t => t.tags);
+// // console.log(tags);
 
-const byName = [...players].sort((a, b) => {
-    const result = a.name[0] > b.name[0];
+// // const stats = tags.reduce((acc, tag) => {
+// //     return {
+// //         ...acc,
+// //         [tag]: acc[tag] ? acc[tag] + 1 : 1,
+// //     };
+// // }, {});
 
-    if (result) {
-        return 1;
-    }
+// const stats = tweets
+//     .flatMap(tweet => tweet.tags)
+//     .reduce(
+//         (acc, tag) => ({
+//             ...acc,
+//             [tag]: acc[tag] ? acc[tag] + 1 : 1,
+//         }),
+//         {},
+//     );
 
-    if (!result) {
-        return -1;
-    }
-});
-
-console.table(byName);
+// console.log(stats);
