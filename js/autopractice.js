@@ -377,3 +377,78 @@
 //     }
 // };
 // Change code above this line
+
+// 34
+// const players = {
+//   mango: 1270,
+//   poly: 468,
+//   ajax: 710,
+//   kiwi: 244
+// };
+// const playtimes = Object.values(players); // [1270, 468, 710, 244]
+// // Change code below this line
+// console.log(playtimes);
+
+// const totalPlayTime = playtimes.reduce((previousValue, playtimes) => {
+//     return previousValue + playtimes
+// }, 0);
+// console.log(totalPlayTime);
+// // Change code above this line
+// const averagePlayTime = totalPlayTime / playtimes.length;
+
+// 35
+// const players = [
+//   { name: "Mango", playtime: 1270, gamesPlayed: 4 },
+//   { name: "Poly", playtime: 469, gamesPlayed: 2 },
+//   { name: "Ajax", playtime: 690, gamesPlayed: 3 },
+//   { name: "Kiwi", playtime: 241, gamesPlayed: 1 },
+// ];
+// // Change code below this line
+
+// const totalAveragePlaytimePerGame = players.reduce((totalAverage, player) => {
+
+//     return totalAverage + player.playtime / player.gamesPlayed
+// },0);
+
+// console.log(totalAveragePlaytimePerGame);
+
+// 38
+// const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+// const authors = [
+//   "Tanith Lee",
+//   "Bernard Cornwell",
+//   "Robert Sheckley",
+//   "Fyodor Dostoevsky",
+// ];
+// // Change code below this line
+
+// const ascendingReleaseDates = [...releaseDates].sort();
+
+// const alphabeticalAuthors = [...authors].sort();
+
+// console.log(ascendingReleaseDates);
+// console.log(alphabeticalAuthors);
+
+// 39
+// const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+// // Change code below this line
+
+// const ascendingReleaseDates = [...releaseDates].sort((a, b) => a - b);
+
+// const descendingReleaseDates = [...releaseDates].sort((a, b) => b - a);
+// console.log(ascendingReleaseDates);
+// console.log(descendingReleaseDates);
+
+// 40
+// const authors = [
+//   "Tanith Lee",
+//   "Bernard Cornwell",
+//   "Robert Sheckley",
+//   "Fyodor Dostoevsky",
+//   "Howard Lovecraft",
+// ];
+// // Change code below this line
+
+// const authorsInAlphabetOrder = [...authors].sort((a, b) => a.localeCompare(b));
+
+// const authorsInReversedOrder = [...authors].sort((a, b) => b.localeCompare(a));
