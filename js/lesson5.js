@@ -90,21 +90,21 @@
  * Контекст в callback-функциях
  */
 
-// const user = {
-//     tag: 'Mango',
-//     showTag() {
-//         console.log('showTag -> this', this);
-//         console.log('showTag -> this.tag', this.tag);
-//     },
-// };
+const user = {
+    tag: 'Mango',
+    showTag() {
+        console.log('showTag -> this', this);
+        console.log('showTag -> this.tag', this.tag);
+    },
+};
 
-// const invokeAction = function (action) {
-//     console.log(action);
+const invokeAction = function (action) {
+    console.log(action);
 
-//     action();
-// };
+    action();
+};
 
-// invokeAction(user.showTag);
+invokeAction(user.showTag);
 
 /*
  * Тренируемся 1
