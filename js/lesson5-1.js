@@ -108,6 +108,20 @@
 // alexSay()
 // console.log(alexSay);
 
+// const args = [18, "CSS"]
+// user.sayHello.call(den,22,"JS")
+// user.sayHello.apply(kate,[18, "CSS"])
+// user.sayHello.apply(kate,args)
+// console.log(user.sayHello.bind(alex));
+// const alexSay = user.sayHello.bind(alex)
+// alexSay(33, "react.js")
+// alexSay(34, 'Node.js')
+// alexSay(11, 'Java')
+// user.sayHello(28, "HTML")
+// alexSay()
+// console.log(alexSay);
+
+
 
 
 // ПЕРЕВА ДО 21.00
