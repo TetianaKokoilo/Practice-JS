@@ -108,19 +108,6 @@
 // alexSay()
 // console.log(alexSay);
 
-// const args = [18, "CSS"]
-// user.sayHello.call(den,22,"JS")
-// user.sayHello.apply(kate,[18, "CSS"])
-// user.sayHello.apply(kate,args)
-// console.log(user.sayHello.bind(alex));
-// const alexSay = user.sayHello.bind(alex)
-// alexSay(33, "react.js")
-// alexSay(34, 'Node.js')
-// alexSay(11, 'Java')
-// user.sayHello(28, "HTML")
-// alexSay()
-// console.log(alexSay);
-
 
 
 
@@ -142,24 +129,27 @@
 
 // 'use strict'
 // Example 1 - Майстерня коштовностей
-// Напишіть метод calcTotalPrice(stoneName), який приймає назву каменю та розраховує та повертає загальну вартість каменів з таким ім'ям, ціною та кількістю із властивості stones.
-// const chopShop = {
-//     stones: [
-//       { name: 'Emerald', price: 1300, quantity: 4 },
-//       { name: 'Diamond', price: 2700, quantity: 3 },
-//       { name: 'Sapphire', price: 1400, quantity: 7 },
-//       { name: 'Ruby', price: 800, quantity: 2 },
-//     ],
-//     calcTotalPrice(stoneName) {
-//         const stone = this.stones.find(({name}) => name === stoneName);
-//         // const stone = this.stones.find(item => item.name === stoneName);
-//         // if(stone){
-//         //     return stone.price * stone.quantity
-//         // }
-//         // return "ERROR!!!"
-//         return stone ? stone.price * stone.quantity : "ERROR!!!"
-//     },
-//   };
+// Напишіть метод calcTotalPrice(stoneName), 
+// який приймає назву каменю та розраховує та повертає загальну вартість каменів з таким ім'ям, 
+// ціною та кількістю із властивості stones.
+const chopShop = {
+    stones: [
+      { name: 'Emerald', price: 1300, quantity: 4 },
+      { name: 'Diamond', price: 2700, quantity: 3 },
+      { name: 'Sapphire', price: 1400, quantity: 7 },
+      { name: 'Ruby', price: 800, quantity: 2 },
+    ],
+
+    calcTotalPrice(stoneName) {
+        const stone = this.stones.find(({name}) => name === stoneName);
+        // const stone = this.stones.find(item => item.name === stoneName);
+        // if(stone){
+        //     return stone.price * stone.quantity
+        // }
+        // return "ERROR!!!"
+        return stone ? stone.price * stone.quantity : "ERROR!!!"
+    },
+  };
 
 // а так можно
 //  calcTotalPrice(stoneName) {
