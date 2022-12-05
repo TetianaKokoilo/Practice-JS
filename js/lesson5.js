@@ -529,70 +529,159 @@
 
 
 
+// CounterPlugin
 
 
 
 
 
-const CounterPlugin = function ({
-  rootSelector,
-  initialValue = 0,
-  step = 1,
-  onUpdate = () => null,
-} = {}) {
-  this._value = initialValue;
-  this._step = step;
-  this._refs = this._getRefs(rootSelector);
 
-  this.onUpdate = onUpdate;
 
-  this._bindEvents();
-  this.updateValueUI();
-};
 
-CounterPlugin.prototype._getRefs = function (rootSelector) {
-  const refs = {};
-  refs.container = document.querySelector(rootSelector);
-  refs.incrementBtn = refs.container.querySelector('[data-increment]');
-  refs.decrementBtn = refs.container.querySelector('[data-decrement]');
-  refs.value = refs.container.querySelector('[data-value]');
+// const CounterPlugin = function ({
+//   rootSelector,
+//   initialValue = 0,
+//   step = 1,
+//   onUpdate = () => null,
+// } = {}) {
+//   this._value = initialValue;
+//   this._step = step;
+//   this._refs = this._getRefs(rootSelector);
 
-  return refs;
-};
+//   this.onUpdate = onUpdate;
 
-CounterPlugin.prototype._bindEvents = function () {
-  this._refs.incrementBtn.addEventListener('click', () => {
-    console.log('CounterPlugin.prototype._bindEvents -> this', this);
-    this.increment();
-    this.updateValueUI();
-  });
+//   this._bindEvents();
+//   this.updateValueUI();
+// };
 
-  this._refs.decrementBtn.addEventListener('click', () => {
-    console.log('CounterPlugin.prototype._bindEvents -> this', this);
-    this.decrement();
-    this.updateValueUI();
-  });
-};
+// CounterPlugin.prototype._getRefs = function (rootSelector) {
+//   const refs = {};
+//   refs.container = document.querySelector(rootSelector);
+//   refs.incrementBtn = refs.container.querySelector('[data-increment]');
+//   refs.decrementBtn = refs.container.querySelector('[data-decrement]');
+//   refs.value = refs.container.querySelector('[data-value]');
 
-CounterPlugin.prototype.updateValueUI = function () {
-  this._refs.value.textContent = this._value;
+//   return refs;
+// };
 
-  this.onUpdate();
-};
+// CounterPlugin.prototype._bindEvents = function () {
+//   this._refs.incrementBtn.addEventListener('click', () => {
+//     console.log('CounterPlugin.prototype._bindEvents -> this', this);
+//     this.increment();
+//     this.updateValueUI();
+//   });
 
-CounterPlugin.prototype.increment = function () {
-  this._value += this._step;
-};
+//   this._refs.decrementBtn.addEventListener('click', () => {
+//     console.log('CounterPlugin.prototype._bindEvents -> this', this);
+//     this.decrement();
+//     this.updateValueUI();
+//   });
+// };
 
-CounterPlugin.prototype.decrement = function () {
-  this._value -= this._step;
-};
+// CounterPlugin.prototype.updateValueUI = function () {
+//   this._refs.value.textContent = this._value;
 
-new CounterPlugin({
-  rootSelector: '#counter-1',
-  step: 10,
-  initialValue: 100,
-  onUpdate: () => console.log('Это мой кастомный колбек для onUpdate'),
+//   this.onUpdate();
+// };
+
+// CounterPlugin.prototype.increment = function () {
+//   this._value += this._step;
+// };
+
+// CounterPlugin.prototype.decrement = function () {
+//   this._value -= this._step;
+// };
+
+// new CounterPlugin({
+//   rootSelector: '#counter-1',
+//   step: 10,
+//   initialValue: 100,
+//   onUpdate: () => console.log('Это мой кастомный колбек для onUpdate'),
+// });
+
+// new CounterPlugin({ rootSelector: '#counter-2', step: 2 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Классы
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+ * Классы
+ * 🐷 - объявление
+ * 🐷 - конструктор
+ * 🐷 - методы
+ * 🐷 - static
+ * 🐷 - приватные свойства
+ * 🐷 - синтаксис публичных свойства и методы классов
+ * 🐷 - геттеры и сеттеры
+ */
+
+class Car {
+    static description = 'Класс описывающий автомобиль';
+
+    static logInfo(carObj) {
+        console.log('Car.logInfo -> carObj', carObj);
+    }
+
+    constructor({ brand, model, price } = {}) {
+        this.brand = brand;
+        this._model = model;
+        this._price = price;
+    }
+
+    get price() {
+        return this._price;
+    }
+
+    set price(newPrice) {
+        this._price = newPrice;
+    }
+
+    get model() {
+        return this._model;
+    }
+
+    set model(newModel) {
+        this._model = newModel;
+    }
+}
+
+const carInstance = new Car({
+    brand: 'Audi',
+    model: 'Q3',
+    price: 35000,
 });
 
-new CounterPlugin({ rootSelector: '#counter-2', step: 2 });
+console.log(carInstance.model);
+carInstance.model = 'Q4';
+console.log(carInstance.model);
+
+console.log(carInstance.price);
+carInstance.price = 50000;
+console.log(carInstance.price);
+
+console.log(carInstance);
