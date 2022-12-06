@@ -320,7 +320,6 @@
 // console.log(user);
 // console.log(user.years());
 
-
 // let i = 0
 
 // function foo() {
@@ -346,7 +345,7 @@
 // class User {
 //     static counter = 0;
 //     static addUser(){
-//         // User.counter +=1 
+//         // User.counter +=1
 //         this.counter +=1;
 //         console.log( this.counter);
 //     }
@@ -519,7 +518,7 @@
 //             this.items.splice(idx, 1)
 //             console.log(idx);
 //         }
-//     } 
+//     }
 // }
 // // Додай методи класу:
 
@@ -663,24 +662,24 @@
 
 
 
-function foo(param) {
-    const value = 10;
-    const value2 = 15
+// function foo(param) {
+//     const value = 10;
+//     const value2 = 15
 
-    function boo(someValue) {
-        return value + value2 * someValue
-    }
+//     function boo(someValue) {
+//         return value + value2 * someValue
+//     }
 
-    if (param > 20) {
-        return boo
-    } else {
-        return value
-    }
-}
-console.log(foo(10));
-console.log(foo(25)(11));
-const result = foo(25);
-console.log(result(11));
+//     if (param > 20) {
+//         return boo
+//     } else {
+//         return value
+//     }
+// }
+// console.log(foo(10));
+// console.log(foo(25)(11));
+// const result = foo(25);
+// console.log(result(11));
 
 
 
